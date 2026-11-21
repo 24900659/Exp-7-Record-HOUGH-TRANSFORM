@@ -32,6 +32,8 @@ Step5:
 Using the HoughLinesP(),detect line co-ordinates for every points in the images.Using For loop,draw the lines on the found co-ordinates.Display the image.
 
 Program
+
+Input image
 ```
 import cv2
 import numpy as np
@@ -45,11 +47,13 @@ plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
 plt.title("Input Image")
 plt.axis('off')
 ```
+grayscale image
 ```
 plt.imshow(gray_image, cmap='gray')
 plt.title("Grayscale Image")
 plt.axis('off')
 ```
+Canny Edge detector output
 ```
 edges = cv2.Canny(gray_image, 50, 150)
 
@@ -57,7 +61,9 @@ plt.imshow(edges, cmap='gray')
 plt.title("Canny Edge Detector")
 plt.axis('off')
 ```
+Display the result of Hough transform
 ```
+
 lines = cv2.HoughLinesP(edges, 1, np.pi / 180, 100, minLineLength=50, maxLineGap=10)
 
 for line in lines:
