@@ -74,7 +74,8 @@ plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
 plt.title("Result of Hough Transform")
 plt.axis('off')
 ```
-Output
+Output:
+
 Input image and grayscale image
 
 <img width="498" height="687" alt="image" src="https://github.com/user-attachments/assets/6e379310-8e11-42b6-94b4-d0aedbd0da67" />
